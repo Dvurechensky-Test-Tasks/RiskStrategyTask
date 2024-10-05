@@ -11,7 +11,6 @@
   </p>
 </p>
 
-
 # <g-emoji class="g-emoji" alias="crystal_ball" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f52e.png">🔮</g-emoji> Тестовое задание компании Стратегия Рийска (Владикавказ)
 **🎯SCAM вакансия**
 
