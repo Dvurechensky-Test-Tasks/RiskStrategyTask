@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="RiskStrategyTask" src="https://raw.githubusercontent.com/Dvurechensky/RiskStrategyTask/main/Info/logo.png" height="140" />
+  <img alt="RiskStrategyTask" src="Info/logo.png" height="140" />
   <p align="center">
     <a href="https://sites.google.com/view/dvurechensky" target="_blank"><img alt="Static Badge" src="https://shields.dvurechensky.pro/badge/Dvurechensky-N-blue"></a>
     <img src="https://shields.dvurechensky.pro/badge/Csharp-Asp Net Core-blue?logo=csharp&logoColor=FFFF00">
