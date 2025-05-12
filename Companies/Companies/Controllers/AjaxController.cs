@@ -1,4 +1,12 @@
-﻿using Companies.Data.Ajax;
+﻿/*
+ * Author: Nikolay Dvurechensky
+ * Site: https://www.dvurechensky.pro/
+ * Gmail: dvurechenskysoft@gmail.com
+ * Last Updated: 12 мая 2025 07:46:05
+ * Version: 1.0.8
+ */
+
+using Companies.Data.Ajax;
 using Companies.Data.Home;
 using Companies.Services;
 using Extensions;

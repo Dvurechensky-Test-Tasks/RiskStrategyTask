@@ -1,3 +1,11 @@
+п»ї/*
+ * Author: Nikolay Dvurechensky
+ * Site: https://www.dvurechensky.pro/
+ * Gmail: dvurechenskysoft@gmail.com
+ * Last Updated: 12 РјР°СЏ 2025 07:46:05
+ * Version: 1.0.8
+ */
+
 using Companies.Services;
 using Extensions;
 using Microsoft.EntityFrameworkCore;
@@ -11,38 +19,38 @@ var connection = builder.Configuration.GetConnectionString("DefaultConnection");
 // Configure Database
 builder.Services.AddDbContext<DatabaseContext>(options =>
                 options.UseSqlite(connection));
-//конфигурация политики кук
+//РєРѕРЅС„РёРіСѓСЂР°С†РёСЏ РїРѕР»РёС‚РёРєРё РєСѓРє
 builder.Services.Configure<CookiePolicyOptions>(options =>
 {
-    options.CheckConsentNeeded = _ => false; //политики согласия не оцениваются
-    options.MinimumSameSitePolicy = SameSiteMode.None; //запрет переопределения значений cookie
-    options.Secure = CookieSecurePolicy.Always; //файлы cookie должны быть безопасными
+    options.CheckConsentNeeded = _ => false; //РїРѕР»РёС‚РёРєРё СЃРѕРіР»Р°СЃРёСЏ РЅРµ РѕС†РµРЅРёРІР°СЋС‚СЃСЏ
+    options.MinimumSameSitePolicy = SameSiteMode.None; //Р·Р°РїСЂРµС‚ РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅРёСЏ Р·РЅР°С‡РµРЅРёР№ cookie
+    options.Secure = CookieSecurePolicy.Always; //С„Р°Р№Р»С‹ cookie РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ Р±РµР·РѕРїР°СЃРЅС‹РјРё
 });
-builder.Services.AddSession(options =>//конфигурируем параметры сессии
+builder.Services.AddSession(options =>//РєРѕРЅС„РёРіСѓСЂРёСЂСѓРµРј РїР°СЂР°РјРµС‚СЂС‹ СЃРµСЃСЃРёРё
 {
-    options.Cookie.Name = AuthExt.NameSessionCookie; //ставим название куку сессии
-    options.IdleTimeout = TimeSpan.FromMinutes(10); //время хранения сессии при бездействии
-    options.Cookie.HttpOnly = true; //доступ только с сервера
-    options.Cookie.IsEssential = true; //нужен ли файл cookie для работы (true-проверки политики согласия пропускаются)
+    options.Cookie.Name = AuthExt.NameSessionCookie; //СЃС‚Р°РІРёРј РЅР°Р·РІР°РЅРёРµ РєСѓРєСѓ СЃРµСЃСЃРёРё
+    options.IdleTimeout = TimeSpan.FromMinutes(10); //РІСЂРµРјСЏ С…СЂР°РЅРµРЅРёСЏ СЃРµСЃСЃРёРё РїСЂРё Р±РµР·РґРµР№СЃС‚РІРёРё
+    options.Cookie.HttpOnly = true; //РґРѕСЃС‚СѓРї С‚РѕР»СЊРєРѕ СЃ СЃРµСЂРІРµСЂР°
+    options.Cookie.IsEssential = true; //РЅСѓР¶РµРЅ Р»Рё С„Р°Р№Р» cookie РґР»СЏ СЂР°Р±РѕС‚С‹ (true-РїСЂРѕРІРµСЂРєРё РїРѕР»РёС‚РёРєРё СЃРѕРіР»Р°СЃРёСЏ РїСЂРѕРїСѓСЃРєР°СЋС‚СЃСЏ)
 });
-builder.Services.AddAntiforgery(options =>//настройки службы против подделки запросов
+builder.Services.AddAntiforgery(options =>//РЅР°СЃС‚СЂРѕР№РєРё СЃР»СѓР¶Р±С‹ РїСЂРѕС‚РёРІ РїРѕРґРґРµР»РєРё Р·Р°РїСЂРѕСЃРѕРІ
 {
     options.HeaderName = "X-CSRF-TOKEN";
 });
 
 builder.Services.AddControllersWithViews();// Add services to the container.
 
-builder.Services.AddCors(); //добавляем политику CORS
+builder.Services.AddCors(); //РґРѕР±Р°РІР»СЏРµРј РїРѕР»РёС‚РёРєСѓ CORS
 
-//добавляем Swagger
+//РґРѕР±Р°РІР»СЏРµРј Swagger
 builder.Services.AddSwaggerGen(options =>
 {
-    //пишем опции Swagger
+    //РїРёС€РµРј РѕРїС†РёРё Swagger
     options.SwaggerDoc("v1", new OpenApiInfo
     {
         Version = "1.0.1",
         Title = "REST API Strategy Risk",
-        Description = "Тестовове задание",
+        Description = "РўРµСЃС‚РѕРІРѕРІРµ Р·Р°РґР°РЅРёРµ",
         Contact = new OpenApiContact
         {
             Name = "Nikolay",
@@ -59,7 +67,7 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Документация");
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Р”РѕРєСѓРјРµРЅС‚Р°С†РёСЏ");
     c.RoutePrefix = "docs";
 });
 
@@ -77,17 +85,17 @@ else
 
 app.UseStaticFiles();
 
-app.UseCookiePolicy(); //использовать политику куки
+app.UseCookiePolicy(); //РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РїРѕР»РёС‚РёРєСѓ РєСѓРєРё
 
-app.UseSession(); //использовать сессии
+app.UseSession(); //РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЃРµСЃСЃРёРё
 
 app.UseRouting();
 
-app.UseMiddleware<AntiforgeryMiddleware>(); //обработчик службы против подделки запросов
+app.UseMiddleware<AntiforgeryMiddleware>(); //РѕР±СЂР°Р±РѕС‚С‡РёРє СЃР»СѓР¶Р±С‹ РїСЂРѕС‚РёРІ РїРѕРґРґРµР»РєРё Р·Р°РїСЂРѕСЃРѕРІ
 
 app.UseAuthorization();
 
-app.UseCors(options =>//используем CORS с любых хостов
+app.UseCors(options =>//РёСЃРїРѕР»СЊР·СѓРµРј CORS СЃ Р»СЋР±С‹С… С…РѕСЃС‚РѕРІ
 {
     options.SetIsOriginAllowed(_ => true)
         .AllowAnyMethod()
@@ -96,10 +104,10 @@ app.UseCors(options =>//используем CORS с любых хостов
 });
 
 #pragma warning disable ASP0014
-app.UseEndpoints(endpoints =>//маршрутизация
+app.UseEndpoints(endpoints =>//РјР°СЂС€СЂСѓС‚РёР·Р°С†РёСЏ
 {
-    endpoints.MapDefaultControllerRoute();//дефолтный роутер
-    endpoints.MapControllers();//для маршрутизации если используются атрибуты
+    endpoints.MapDefaultControllerRoute();//РґРµС„РѕР»С‚РЅС‹Р№ СЂРѕСѓС‚РµСЂ
+    endpoints.MapControllers();//РґР»СЏ РјР°СЂС€СЂСѓС‚РёР·Р°С†РёРё РµСЃР»Рё РёСЃРїРѕР»СЊР·СѓСЋС‚СЃСЏ Р°С‚СЂРёР±СѓС‚С‹
 });
 #pragma warning restore ASP0014
 
