@@ -2,8 +2,8 @@
  * Author: Nikolay Dvurechensky
  * Site: https://www.dvurechensky.pro/
  * Gmail: dvurechenskysoft@gmail.com
- * Last Updated: 31 августа 2025 07:38:14
- * Version: 1.0.20
+ * Last Updated: 01 сентября 2025 11:04:50
+ * Version: 1.0.21
  */
 
 using Microsoft.AspNetCore.Antiforgery;
