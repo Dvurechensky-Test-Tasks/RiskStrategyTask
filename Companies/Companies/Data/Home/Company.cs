@@ -2,8 +2,8 @@
  * Author: Nikolay Dvurechensky
  * Site: https://www.dvurechensky.pro/
  * Gmail: dvurechenskysoft@gmail.com
- * Last Updated: 26 сентября 2025 11:49:00
- * Version: 1.0.46
+ * Last Updated: 27 сентября 2025 14:17:03
+ * Version: 1.0.47
  */
 
 using System.ComponentModel.DataAnnotations.Schema;
