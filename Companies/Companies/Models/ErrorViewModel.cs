@@ -2,8 +2,8 @@
  * Author: Nikolay Dvurechensky
  * Site: https://www.dvurechensky.pro/
  * Gmail: dvurechenskysoft@gmail.com
- * Last Updated: 28 октября 2025 06:50:25
- * Version: 1.0.79
+ * Last Updated: 29 октября 2025 06:50:24
+ * Version: 1.0.80
  */
 
 namespace Companies.Models
