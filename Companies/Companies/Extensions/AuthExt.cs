@@ -2,8 +2,8 @@
  * Author: Nikolay Dvurechensky
  * Site: https://www.dvurechensky.pro/
  * Gmail: dvurechenskysoft@gmail.com
- * Last Updated: 11 ноября 2025 06:52:06
- * Version: 1.0.93
+ * Last Updated: 12 ноября 2025 06:50:24
+ * Version: 1.0.94
  */
 
 namespace Extensions;
