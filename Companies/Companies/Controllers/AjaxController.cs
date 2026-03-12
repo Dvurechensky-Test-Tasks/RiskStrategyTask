@@ -2,8 +2,8 @@
  * Author: Nikolay Dvurechensky
  * Site: https://www.dvurechensky.pro/
  * Gmail: dvurechenskysoft@gmail.com
- * Last Updated: 11 марта 2026 06:50:25
- * Version: 1.0.213
+ * Last Updated: 12 марта 2026 06:50:25
+ * Version: 1.0.214
  */
 
 using Companies.Data.Ajax;
