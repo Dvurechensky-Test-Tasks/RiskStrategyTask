@@ -2,8 +2,8 @@
  * Author: Nikolay Dvurechensky
  * Site: https://www.dvurechensky.pro/
  * Gmail: dvurechenskysoft@gmail.com
- * Last Updated: 19 марта 2026 06:50:25
- * Version: 1.0.220
+ * Last Updated: 20 марта 2026 06:50:24
+ * Version: 1.0.221
  */
 
 using Companies.Data.Home;
