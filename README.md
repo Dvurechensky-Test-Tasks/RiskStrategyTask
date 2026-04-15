@@ -11,98 +11,115 @@
   </p>
 </p>
 
-<h1 align="center"> <g-emoji class="g-emoji" alias="crystal_ball" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f52e.png">🔮</g-emoji> Тестовое задание компании Стратегия Рийска (Владикавказ)</h1>
-<p align="center"><b>🎯SCAM</b> вакансия <b><i>HeadHunter</i></b></p>
+<h1 align="center">🔮 Test Assignment for Strategy Risk Company (Vladikavkaz)</h1>
+<p align="center"><b>🎯SCAM</b> vacancy on <b><i>HeadHunter</i></b></p>
 
-# ✨ Оглавление
+<div align="center" style="margin: 20px 0; padding: 10px; background: #1c1917; border-radius: 10px;">
+  <strong>🌐 Language: </strong>
+  
+  <a href="./README.ru.md" style="color: #F5F752; margin: 0 10px;">
+    🇷🇺 Russian
+  </a>
+  | 
+  <span style="color: #0891b2; margin: 0 10px;">
+    ✅ 🇺🇸 English (current)
+  </span>
+</div>
 
-- [✨ Оглавление](#-оглавление)
-  - [✨ Запуск](#-запуск)
-    - [🚀 Требования системы для запуска:](#-требования-системы-для-запуска)
-    - [🚀 Требования системы для разработки:](#-требования-системы-для-разработки)
-  - [✨ Технические характеристики](#-технические-характеристики)
-  - [✨ Требования задания](#-требования-задания)
-  - [🤖 Результат выполнения](#-результат-выполнения)
-  - [👾 Важно отметить](#-важно-отметить)
+---
 
-## ✨ Запуск
+# ✨ Table of Contents
 
-### 🚀 Требования системы для запуска:
+- [✨ Table of Contents](#-table-of-contents)
+  - [✨ Run](#-run)
+    - [🚀 System Requirements (Runtime):](#-system-requirements-runtime)
+    - [🚀 System Requirements (Development):](#-system-requirements-development)
+  - [✨ Technical Specifications](#-technical-specifications)
+  - [✨ Task Requirements](#-task-requirements)
+  - [🤖 Implementation Result](#-implementation-result)
+  - [👾 Important Notes](#-important-notes)
+
+## ✨ Run
+
+### 🚀 System Requirements (Runtime):
 
 1. Visual Studio 2022
 
-### 🚀 Требования системы для разработки:
+### 🚀 System Requirements (Development):
 
-> для функционирования встроенного Grunt в проекте
+> required for embedded Grunt functionality in the project
 
-1. Выгрузить папку node_modules из проекта
-2. В PowerShell в корне проекта ввести команду
+1. Extract the `node_modules` folder from the project
+2. In PowerShell, in the project root, run:
 
 ```bash
 cmd /c mklink /D node_modules node_modules
 ```
 
-3. Перезапустить проект
+3. Restart the project
 
-## ✨ Технические характеристики
+## ✨ Technical Specifications
 
 - Backend
   - ASP NET MVC
+
 - Frontend
-  - Typescript
+  - TypeScript
+
 - Database
   - EntityFrameworkCore
 
-## ✨ Требования задания
+## ✨ Task Requirements
 
-> The text in the "Company Name" column should be a link that opens "Details" for its
-> object
+> The text in the "Company Name" column should be a link that opens "Details" for its object
 
-1. Текст в столбце «Название компании» должен быть ссылкой, которая открывает «Подробности» компании
-   > Use EntityFramework, store data in memory (add a code that creates initial data at
-   > application startup)
-2. Используйте EntityFramework, храните данные в памяти (добавьте код, создающий исходные данные в
-   запуск приложения)
+1. The text in the "Company Name" column must be a link that opens company "Details"
+
+   > Use EntityFramework, store data in memory (add code to generate initial data at application startup)
+
+2. Use EntityFramework and store data in memory (add code to create initial data on application startup)
+
    > Set a fixed width for groups in "Details"
-3. Установите фиксированную ширину для групп в разделе «Подробности».
-   > Use CSS Flex to align groups in "Details", there should be 1 column of groups if browser
-   > window is narrow
-4. Используйте CSS Flex для выравнивания групп в разделе "Подробности", должен быть 1 столбец групп, если окно браузера узкое
-   > Use CSS Grid to align items in groups in "Details"
-5. Используйте CSS Grid для выравнивания элементов в группах в разделе «Подробности».
-   > Avoid duplication of CSS and HTML markup code that generates "Details" in C#/markup
-   > code (each group should have the same layout for the 'caption', 'toolbar' and 'content'
-   > items)
-6. Избегайте дублирования кода разметки CSS и HTML, который генерирует «Подробности» в C#/разметке.
-   код (каждая группа должна иметь одинаковый макет для объектов «заголовка», «панели инструментов» и «контента»)
-   > Implement behavior for 'Refresh' button: reload data from the server and recreate DOM
-   > in browser
-7. Реализовать поведение кнопки «Обновить»: перезагрузить данные с сервера и заново создать DOM.
-   в браузере
-   > Adjust the "Employees" group to be nearly twice wider than other groups, keep vertical
-   > groups alignment
-8. Отрегулируйте группу "Сотрудники", чтобы она была почти в два раза шире, чем другие группы, сохраняя вертикальность
-   выравнивание групп
-   > Don't render grids on the server side. Instead, render an empty grid and perform a new
-   > 'fetch' request when a page is loaded and build grid rows in javascript code, in browser.
-   > Implement necessary server side API to load data for grids
-9. Не визуализируйте сетки на стороне сервера. Вместо этого визуализируйте пустую сетку и выполните новую
-   запрос «выборки» при загрузке страницы и построение строк сетки в коде javascript в браузере.
-   Реализовать необходимый API на стороне сервера для загрузки данных для сеток.
 
-## 🤖 Результат выполнения
+3. Set a fixed width for groups in the "Details" section
+
+   > Use CSS Flex to align groups in "Details", there should be 1 column of groups if browser window is narrow
+
+4. Use CSS Flex to align groups in "Details"; there should be 1 column if the browser window is narrow
+
+   > Use CSS Grid to align items inside groups in "Details"
+
+5. Use CSS Grid to align elements inside groups in "Details"
+
+   > Avoid duplication of CSS and HTML markup that generates "Details" in C#/markup code (each group should have the same layout for 'caption', 'toolbar', and 'content')
+
+6. Avoid duplication of CSS and HTML markup that generates "Details" in C#/markup code (each group should share the same layout for 'caption', 'toolbar', and 'content')
+
+   > Implement behavior for 'Refresh' button: reload data from server and recreate DOM in browser
+
+7. Implement 'Refresh' button behavior: reload data from the server and rebuild the DOM in the browser
+
+   > Adjust the "Employees" group to be nearly twice as wide as other groups while maintaining vertical alignment
+
+8. Adjust the "Employees" group to be nearly twice as wide as other groups, keeping vertical alignment
+
+   > Don't render grids on the server side. Instead, render an empty grid and perform a new fetch request on page load, then build rows in JavaScript in the browser. Implement necessary server-side API
+
+9. Do not render grids on the server side. Instead, render an empty grid and perform a fetch request when the page loads, building rows in JavaScript in the browser. Implement the required server-side API
+
+## 🤖 Implementation Result
 
 <p align="center">
-  <h1 align="center">👨🏽‍💻 Версия на ПК</h1>
+  <h1 align="center">👨🏽‍💻 Desktop Version</h1>
   <h5 align="center">💫 Main 💫</h5>
   <img src="Info/1.png" width="100%">
   <h5 align="center">💫 Details 💫</h5>
   <img src="Info/2.png" width="100%">
-  <h1 align="center">👨🏽‍💻 Для заполнения групп создано REST API</h1>
+  <h1 align="center">👨🏽‍💻 REST API created for group data population</h1>
   <img src="Info/3.png" width="100%">
-  <h1 align="center">👨🏽‍💻 Пример заполненной версии 💫Details💫</h1>
+  <h1 align="center">👨🏽‍💻 Example of filled 💫Details💫</h1>
   <img src="Info/4.png" width="100%">
-  <h1 align="center">👨🏽‍💻 Пример мобильной версии 💫Details💫</h1>
+  <h1 align="center">👨🏽‍💻 Mobile Version Example 💫Details💫</h1>
   <h5 align="center">💫 870px 💫</h5>
   <p align="center">
     <img src="Info/5.png" width="65%">
@@ -113,12 +130,12 @@ cmd /c mklink /D node_modules node_modules
   </p>
 </p>
 
-## 👾 Важно отметить
+## 👾 Important Notes
 
-- В задаче не была описана логика работы кнопок редактирования и поведение кнопки добавления
-- В задаче не затрагивались вопросы ограничения по стеку технологий применяемых для ускорения разработки
-- В задаче нету пунктов о сложности или простоте исполнения, конкретного формата выполнения работы не указано
-- Бонусом в задаче реализована поддержка TypeScript и автоматическая генерация JavaScript и CSS сразу в минимизированный формат
-- Бонусом в задаче сделано API способное принимать пачки данных на обработку
+- The task did not specify the behavior of edit buttons or the add button logic
+- The task did not impose any restrictions on the technology stack for faster development
+- There were no requirements regarding complexity or simplicity, nor a strict format for implementation
+- As a bonus, TypeScript support and automatic minification of JavaScript and CSS were implemented
+- As a bonus, an API capable of processing batch data was implemented
 
 <p align="center">✨Dvurechensky✨</p>
